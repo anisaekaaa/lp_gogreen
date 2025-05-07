@@ -1,0 +1,244 @@
+/* ---------------- Donasi Section ---------------- */
+#donasi {
+    background-image: url('C:/xampp/htdocs/lp_gogreen/donasibg.jpg'); /* Ganti dengan path gambar yang sesuai */
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    color: white;
+}
+
+/* Judul Donasi */
+#donasi .judul-donasi h2 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+/* Subjudul Donasi */
+#donasi .subjudul-donasi p {
+    font-size: 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s 0.5s forwards; /* Animasi dengan delay */
+}
+
+/* Deskripsi Donasi */
+#donasi .deskripsi-donasi p {
+    font-size: 18px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeIn 2s 1s forwards; /* Animasi dengan delay */
+    line-height: 1.6;
+}
+
+/* Tombol CTA Donasi */
+#donasi .cta-donasi .cta-button {
+    background-color: #388dff;
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 30px;
+    transition: background-color 0.3s, transform 0.3s;
+    opacity: 0;
+    animation: fadeInZoom 2s 1.5s forwards; /* Animasi dengan delay */
+}
+
+#donasi .cta-donasi .cta-button:hover {
+    background-color: #569fff;
+    transform: scale(1.1); /* Zoom-in effect */
+}
+
+/* Link CTA tambahan */
+#donasi .cta-link {
+    text-align: center;
+    margin-top: 30px;
+    opacity: 0;
+    animation: fadeIn 2s 2s forwards;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* biar responsif di layar kecil */
+    gap: 20px; /* sekarang gap akan berfungsi */
+}
+
+#donasi .cta-link a {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 8px 16px; /* lebih kecil */
+    border-radius: 6px;
+    display: inline-block;
+    color: #388dff;
+    font-weight: 600;
+    font-size: 14px; /* perkecil teks */
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#donasi .cta-link a:hover {
+    background-color: rgba(255, 255, 255, 1); /* jadi putih solid saat hover */
+    transform: scale(1.05);
+}
+
+/* ---------------- Animasi Fade-in ---------------- */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ---------------- Animasi Zoom-in untuk tombol CTA ---------------- */
+@keyframes fadeInZoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ---------------- Header ---------------- */
+header {
+    background-color: #388dff;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #569fff;
+    border-radius: 5px;
+}
+
+/* Dropdown Menu */
+nav ul li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #388dff;
+    min-width: 180px;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav ul li .dropdown-content li {
+    padding: 10px 15px;
+}
+
+nav ul li .dropdown-content li a:hover {
+    background-color: #569fff;
+    border-radius: 5px;
+}
+
+/* ---------------- Footer ---------------- */
+footer {
+    background-color: #388dff;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.social-icons a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1);
+}
+
+/* ---------------- Responsiveness ---------------- */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li .dropdown-content {
+        position: relative;
+        top: 0;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    footer h3 {
+        font-size: 20px;
+    }
+
+    .social-icons a img {
+        width: 36px;
+        height: 36px;
+    }
+}
