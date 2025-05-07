@@ -1,0 +1,142 @@
+/* Background Image */
+body {
+    background-image: url('C:/xampp/htdocs/lp_gogreen/projekbg.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* Header */
+header {
+    background-color: #388dff;
+    padding: 15px 0;
+    color: white;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navigasi */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Komunitas Section */
+.komunitas {
+    padding: 50px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.komunitas h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.komunitas p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    justify-items: center;
+    animation: slideIn 1.5s ease-out;
+}
+
+/* Keuntungan dan Cara Bergabung */
+.keuntungan, .cara-bergabung {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.keuntungan h3, .cara-bergabung h3 {
+    font-size: 24px;
+    color: #388dff;
+}
+
+.keuntungan ul, .cara-bergabung ul {
+    text-align: left;
+    margin-top: 10px;
+    list-style-type: none;  /* Menghilangkan bullet points */
+}
+
+.keuntungan ul li, .cara-bergabung ul li {
+    font-size: 16px;
+    color: #000000;  /* Menjadikan teks menjadi warna hitam */
+}
+
+/* Untuk mengatur teks dalam <ul> agar berada di tengah */
+.keuntungan ul, .cara-bergabung ul {
+    text-align: center;  /* Menambahkan perintah untuk men-center teks */
+}
+
+/* Button CTA */
+.cara-bergabung .btn {
+    display: inline-block;
+    background-color: #388dff;
+    padding: 10px 20px;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cara-bergabung .btn:hover {
+    transform: scale(1.1);
+    background-color: #0069f4;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
