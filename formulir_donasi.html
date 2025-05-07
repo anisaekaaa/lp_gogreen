@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Donasi - Green Earth Initiative</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="formulir_donasi.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Green Earth Initiative</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sukarelawan.html">Sukarelawan</a></li>
+                <li><a href="donasi.html">Donasi</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Formulir Donasi -->
+    <section id="donasi">
+        <div class="content">
+            <h2>Formulir Donasi</h2>
+            <form id="donasiForm">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama" required>
+
+                <label for="email">Alamat Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="nominal">Nominal Donasi (Rp):</label>
+                <input type="number" id="nominal" name="nominal" required>
+
+                <label for="metode">Metode Pembayaran:</label>
+                <select id="metode" name="metode" required>
+                    <option value="transfer_bank">Transfer Bank</option>
+                    <option value="ewallet">E-Wallet (OVO, GoPay, DANA)</option>
+                    <option value="kartu_kredit">Kartu Kredit</option>
+                </select>
+
+                <label for="pesan">Pesan atau Dukungan (Opsional):</label>
+                <textarea id="pesan" name="pesan" rows="3"></textarea>
+
+                <button type="submit" class="cta-button">Donasi Sekarang</button>
+            </form>
+
+            <div id="konfirmasi" style="display:none;">
+                <h3>Terima Kasih atas Donasimu!</h3>
+                <p>Donasimu akan membantu keberlangsungan proyek lingkungan kami.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak">
+        <h3>Hubungi Kami</h3>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/greenearth_initiative" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon">
+            </a>
+            <a href="https://www.facebook.com/greenearthinitiative" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://x.com/greenearthinit" target="_blank">
+                <img src="x.jpg" alt="X (Twitter)" class="social-icon">
+            </a>
+            <a href="https://www.youtube.com/channel/greenearthinitiative" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" class="social-icon">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('donasiForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('konfirmasi').style.display = 'block';
+            document.getElementById('donasiForm').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
