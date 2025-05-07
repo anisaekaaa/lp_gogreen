@@ -82,17 +82,18 @@ nav ul li a {
 .keuntungan ul, .cara-bergabung ul {
     text-align: left;
     margin-top: 10px;
-    list-style-type: none;  /* Menghilangkan bullet points */
+    list-style-type: none;
 }
 
 .keuntungan ul li, .cara-bergabung ul li {
     font-size: 16px;
-    color: #000000;  /* Menjadikan teks menjadi warna hitam */
+    color: #000000;
 }
 
-/* Untuk mengatur teks dalam <ul> agar berada di tengah */
-.keuntungan ul, .cara-bergabung ul {
-    text-align: center;  /* Menambahkan perintah untuk men-center teks */
+/* Button CTA - berada di luar grid */
+.cta-container {
+    text-align: center;  /* Menyelaraskan tombol ke tengah */
+    margin-top: 40px; /* Memberikan jarak atas */
 }
 
 /* Button CTA */
@@ -104,7 +105,7 @@ nav ul li a {
     font-size: 18px;
     border-radius: 5px;
     text-decoration: none;
-    margin-top: 20px;
+    margin-top: 40px;  /* Memberikan jarak atas agar tidak terlalu rapat */
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
@@ -129,14 +130,5 @@ nav ul li a {
     }
     to {
         transform: translateX(0);
-    }
-}
-
-@keyframes scaleUp {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.1);
     }
 }

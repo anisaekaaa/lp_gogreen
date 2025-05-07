@@ -131,9 +131,11 @@ nav ul li .dropdown-content li a:hover {
     margin-bottom: 15px;
 }
 
+/* Menghilangkan titik-titik pada elemen <ul> di dalam .manfaat dan .syarat */
 .manfaat ul, .syarat ul {
-    list-style-type: disc;
-    padding-left: 20px;
+    list-style: none;  /* Menghilangkan titik-titik pada list */
+    padding-left: 0;   /* Menghilangkan padding kiri */
+    margin: 0;         /* Menghilangkan margin */
 }
 
 .manfaat ul li, .syarat ul li {

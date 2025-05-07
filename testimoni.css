@@ -80,18 +80,15 @@ nav ul li .dropdown-content li a:hover {
 #testimoni {
     padding: 50px 20px;
     text-align: center;
-    background-image: url('testi2.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
+    background-color: #e0f0ff; /* diganti dari background image ke warna terang */
+    color: #1a1a1a; /* warna teks yang kontras */
 }
 
 #testimoni h2 {
     font-size: 30px;
     margin-bottom: 30px;
-    color: #ffffff;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    color: #1a1a1a;
+    text-shadow: none; /* hilangkan efek shadow supaya lebih clean */
 }
 
 .testimoni-grid {
@@ -102,13 +99,17 @@ nav ul li .dropdown-content li a:hover {
 }
 
 .testimoni-card {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 400px;
+
+    /* Tambahan animasi fade-in */
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
 }
 
 .testimoni-card h3 {
@@ -119,7 +120,7 @@ nav ul li .dropdown-content li a:hover {
 
 .testimoni-card p {
     font-size: 16px;
-    color: #333;
+    color: #1a1a1a;
     font-style: italic;
 }
 
@@ -127,6 +128,23 @@ nav ul li .dropdown-content li a:hover {
 .testimoni-card:hover {
     transform: scale(1.05);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* (Opsional) Tombol dalam testimoni */
+.testimoni-btn {
+    background-color: #388dff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.testimoni-btn:hover {
+    background-color: #0069f4;
 }
 
 /* Footer */
@@ -194,21 +212,6 @@ footer h3 {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Testimoni Card dengan Fade In */
-.testimoni-card {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 400px;
-
-    /* Tambahan animasi fade-in */
-    animation: fadeInUp 1s ease forwards;
-    opacity: 0;
 }
 
 /* Animasi bertahap */
