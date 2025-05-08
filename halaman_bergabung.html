@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Bergabung - Green Earth Initiative</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="halaman_bergabung.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Green Earth Initiative</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sukarelawan.html">Sukarelawan</a></li>
+                <li><a href="donasi.html">Donasi</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Formulir Bergabung -->
+    <section id="bergabung">
+        <div class="content">
+            <h2>Formulir Bergabung</h2>
+            <form id="bergabungForm">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama" required>
+
+                <label for="nohp">Nomor Handphone:</label>
+                <input type="tel" id="nohp" name="nohp" required>
+
+                <label for="ttl">Tanggal Lahir:</label>
+                <input type="date" id="ttl" name="ttl" required>
+
+                <label for="umur">Umur (Akan dihitung otomatis):</label>
+                <input type="text" id="umur" name="umur" readonly>
+
+                <label for="provinsi">Provinsi:</label>
+                <input type="text" id="provinsi" name="provinsi" required>
+
+                <label for="kabupaten">Kabupaten/Kota:</label>
+                <input type="text" id="kabupaten" name="kabupaten" required>
+
+                <label for="kecamatan">Kecamatan:</label>
+                <input type="text" id="kecamatan" name="kecamatan" required>
+
+                <label for="motivasi">Motivasi Bergabung:</label>
+                <textarea id="motivasi" name="motivasi" rows="4" required></textarea>
+
+                <button type="submit" class="cta-button">DAFTAR</button>
+            </form>
+
+            <div id="konfirmasi" style="display:none;">
+                <h3>Terima Kasih telah Bergabung!</h3>
+                <p>Informasi pendaftaran Anda telah berhasil terkirim.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak">
+        <h3>Hubungi Kami</h3>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/greenearth_initiative" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon">
+            </a>
+            <a href="https://www.facebook.com/greenearthinitiative" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://x.com/greenearthinit" target="_blank">
+                <img src="x.jpg" alt="X (Twitter)" class="social-icon">
+            </a>
+            <a href="https://www.youtube.com/channel/greenearthinitiative" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" class="social-icon">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Menghitung umur berdasarkan Tanggal Lahir
+        document.getElementById('ttl').addEventListener('change', function() {
+            var ttl = new Date(this.value);
+            var today = new Date();
+            var age = today.getFullYear() - ttl.getFullYear();
+            var m = today.getMonth() - ttl.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < ttl.getDate())) {
+                age--;
+            }
+            document.getElementById('umur').value = age;
+        });
+
+        // Menampilkan konfirmasi setelah formulir disubmit
+        document.getElementById('bergabungForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('konfirmasi').style.display = 'block';
+            document.getElementById('bergabungForm').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

@@ -91,8 +91,9 @@ nav .dropdown-content li {
 }
 
 .manfaat ul {
-    padding-left: 20px;
-    text-align: left;
+    padding-left: 0; /* Menghilangkan padding kiri */
+    list-style-type: none; /* Menghapus bullet points */
+    text-align: center; /* Menata teks ke tengah */
 }
 
 .manfaat li {

@@ -81,13 +81,13 @@ nav ul li .dropdown-content li a:hover {
     padding: 50px 20px;
     text-align: center;
     background-color: #e0f0ff; /* diganti dari background image ke warna terang */
-    color: #1a1a1a; /* warna teks yang kontras */
+    color: #388dff; /* warna teks yang kontras */
 }
 
 #testimoni h2 {
     font-size: 30px;
     margin-bottom: 30px;
-    color: #1a1a1a;
+    color: #388dff;
     text-shadow: none; /* hilangkan efek shadow supaya lebih clean */
 }
 

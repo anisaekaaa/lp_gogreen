@@ -1,60 +1,73 @@
-/* Background Image */
+/* Global */
 body {
-    background-image: url('C:/xampp/htdocs/lp_gogreen/projekbg.jpg');
-    background-size: cover;
-    background-position: center;
-    font-family: Arial, sans-serif;
-    color: #fff;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #eaf6ff; /* warna kalem menggantikan background image */
+    color: #000;
 }
 
 /* Header */
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #388dff;
-    padding: 15px 0;
+    padding: 15px 30px;
     color: white;
-    text-align: center;
 }
 
-header .logo {
-    font-size: 24px;
+.logo {
+    font-size: 20px;
     font-weight: bold;
 }
 
-/* Navigasi */
 nav ul {
-    list-style-type: none;
-    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
     margin: 0;
+    padding: 0;
 }
 
-nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-nav ul li a {
+nav a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-weight: 500;
 }
 
-/* Komunitas Section */
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #569fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav .dropdown-content li {
+    margin-bottom: 5px;
+}
+
+/* Section Komunitas */
 .komunitas {
-    padding: 50px 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    padding: 60px 20px;
     text-align: center;
+    animation: fadeIn 1.2s ease-in-out;
 }
 
 .komunitas h1 {
-    font-size: 36px;
+    font-size: 32px;
+    color: #388dff;
     margin-bottom: 20px;
-    animation: fadeIn 2s ease-out;
 }
 
 .komunitas p {
     font-size: 18px;
+    color: #333;
     margin-bottom: 40px;
-    animation: fadeIn 2s ease-out;
 }
 
 /* Grid Layout */
@@ -62,73 +75,74 @@ nav ul li a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    justify-items: center;
-    animation: slideIn 1.5s ease-out;
+    justify-content: center;
+    align-items: start;
+    margin-bottom: 40px;
+    animation: fadeIn 1.2s ease-in-out;
 }
 
-/* Keuntungan dan Cara Bergabung */
 .keuntungan, .cara-bergabung {
     background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .keuntungan h3, .cara-bergabung h3 {
-    font-size: 24px;
+    font-size: 22px;
     color: #388dff;
+    margin-bottom: 15px;
 }
 
 .keuntungan ul, .cara-bergabung ul {
-    text-align: left;
-    margin-top: 10px;
+    text-align: center; /* Menjadikan teks list center */
     list-style-type: none;
+    padding-left: 0;
 }
 
 .keuntungan ul li, .cara-bergabung ul li {
     font-size: 16px;
     color: #000000;
-}
-
-/* Button CTA - berada di luar grid */
-.cta-container {
-    text-align: center;  /* Menyelaraskan tombol ke tengah */
-    margin-top: 40px; /* Memberikan jarak atas */
+    margin-bottom: 10px;
 }
 
 /* Button CTA */
-.cara-bergabung .btn {
-    display: inline-block;
+.cta-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 12px 25px;
     background-color: #388dff;
-    padding: 10px 20px;
     color: white;
-    font-size: 18px;
-    border-radius: 5px;
+    border: none;
+    border-radius: 8px;
     text-decoration: none;
-    margin-top: 40px;  /* Memberikan jarak atas agar tidak terlalu rapat */
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.cara-bergabung .btn:hover {
-    transform: scale(1.1);
+.btn:hover {
     background-color: #0069f4;
+    transform: scale(1.05);
 }
 
-/* Animasi */
+/* Fade-in Animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
+/* Responsiveness */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
     }
 }
